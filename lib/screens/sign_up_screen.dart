@@ -34,6 +34,15 @@ class _SignUpScreenState extends State<SignUpScreen> {
             const SizedBox(
               height: 16.0,
             ),
+            TextField(
+              controller: _passwordController,
+              decoration: const InputDecoration(
+                labelText: 'Password',
+                border: OutlineInputBorder(),
+              ),
+              obscureText: true,
+            ),
+            const SizedBox(height: 16.0),
             ElevatedButton(
                 onPressed: () async {
                   try {
@@ -49,12 +58,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   }
                 },
                 child: const Text('Sign Up')),
-            TextField(
-              controller: _passwordController,
-              decoration: const InputDecoration(
-                  labelText: 'Password', border: OutlineInputBorder()),
-              obscureText: true,
-            ),
           ],
         ),
       ),
